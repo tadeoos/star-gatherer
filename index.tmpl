@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class='reddit'>
+<table class="tg">
+{% for obj in saved %}
+  <tr>
+    <th class="tg-ejgj"><a href="{{ obj.url }}">{{ obj.name }}</a></th>
+  </tr>
+  {% if obj.text %}
+  <tr>
+    <td class="tg-rmb8">{{ obj.text }}</td>
+  </tr>
+  {% endif %}
+{% endfor %}
+</table>
+</div>
+<div class="twitter">
+<table class="tg">
+{% for obj in tweets %}
+  <tr>
+  <td class="tg-rmb8">
+  <blockquote class="twiiter-tweet">
+   {{obj.name}}
+   <p>{{ obj.text }}
+   <a href="{{obj.url}}">link</a>
+   </p>
+   </blockquote>
+   </td>
+  </tr>
+{% endfor %}
+</table>
+
+</div>
+</body>
+</html>
