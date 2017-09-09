@@ -1,44 +1,75 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<div class='reddit'>
-<table class="tg">
-{% for obj in saved %}
-  <tr>
-    <th class="tg-ejgj"><a href="{{ obj.url }}">{{ obj.name }}</a></th>
-  </tr>
-  {% if obj.text %}
-  <tr>
-    <td class="tg-rmb8">{{ obj.text }}</td>
-  </tr>
-  {% endif %}
-{% endfor %}
-</table>
-</div>
-<div class="twitter">
-<table class="tg">
-{% for obj in tweets %}
-  <tr>
-  <td class="tg-rmb8">
-  <blockquote class="twiiter-tweet">
-   {{obj.name}}
-   <p>{{ obj.text }}
-   <a href="{{obj.url}}">link</a>
-   </p>
-   </blockquote>
-   </td>
-  </tr>
-{% endfor %}
-</table>
 
-</div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cols.css">
+    <script src="https://use.fontawesome.com/3c9204c8fb.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <span class='navItem active' id='nav-red'><i class="fa fa-reddit" aria-hidden="true"></i> REDDIT</span>
+            <span class='navItem' id='nav-twitt'><i class="fa fa-twitter" aria-hidden="true"></i> TWITTER</span>
+            <span class='navItem active' id='nav-gh'><i class="fa fa-github" aria-hidden="true"></i> GITHUB</span>
+        </div>
+        <div class='reddit'>
+            <p>Reddit: {{red_count}}</p>
+            <table class="table-reddit">
+                {% for obj in saved %}
+                <tr>
+                    <th class="red-th"><a href="{{ obj.url }}">{{ obj.name }}</a></th>
+                </tr>
+                {% if obj.text %}
+                <tr>
+                    <td class="red-td">{{ obj.text }}</td>
+                </tr>
+                {% endif %} {% endfor %}
+            </table>
+        </div>
+        <div class="right-col">
+            <div class="twitter">
+                <p>Twitter: {{tweet_count}}</p>
+                <table class="twitter-table">
+                    {% for obj in tweets %}
+                    <tr>
+                        <td class="twitter-td">
+                            <blockquote class="twitter-tweet">
+                                {{obj.name}}
+                                <p>
+                                    {{ obj.text }}
+                                    <a href="{{obj.url}}">link</a>
+                                </p>
+
+                            </blockquote>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+            <div class="github">
+                <p>GitHub: {{ gh_count }}</p>
+                <div class="gh-stars">
+                    {% for obj in gh_stars %}
+                    <div class="gh-detail">
+                        <p><a href="{{ obj.url }}">{{ obj.name }}</a></p>
+                        <p>{{ obj.lang }}</p>
+                        <p>{{ obj.desc }}</p>
+                        <p>{{ obj.stars }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="star.js"></script>
 </body>
+
 </html>

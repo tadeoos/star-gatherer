@@ -1,1 +1,1 @@
-from star_gazer import *
+from .star_gazer import *

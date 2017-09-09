@@ -1,0 +1,6 @@
+decouple
+jinja2
+praw
+requests
+selenium
+twitter

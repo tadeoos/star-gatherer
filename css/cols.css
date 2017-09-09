@@ -1,0 +1,115 @@
+.reddit {
+    grid-row: 2;
+    grid-column: 1;
+    margin-right: 30px;
+    border-right: #7D1935 solid;
+    /*border-radius: 1.8em;*/
+    padding: 20px;
+}
+
+
+.collapsed {
+    display: none;
+}
+
+
+.red-td {
+    /*border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #bbb;*/
+    background-color: #CEE3F8;
+    font-size: 12px;
+    padding: 10px 5px;
+    font-family: Verdana, sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #bbb;
+    color: #594F4F;
+}
+
+.red-th {
+    vertical-align: top;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #bbb;
+    color: #493F3F;
+    /*background-color: #DC6431;*/
+    background-color: #336699;
+    font-weight: bold;
+}
+
+.red-th > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.red-th > a:hover {
+    color: #DC6431;
+    /*text-decoration: none;*/
+}
+
+.right-col {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.twitter {
+    display: none;
+    width: 100%;
+}
+
+.twitter-table{
+    /*background-color: #1DA1F2;*/
+}
+
+.twitter-td{
+    padding: 10px;
+}
+
+
+.twitter-tweet {
+    background-color: #1DA1F2;
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 10px 16px 16px 16px;
+    max-width: 468px;
+}
+
+.twitter-tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.twitter-tweet a {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    outline: 0 none;
+    /*border: white solid 1px;*/
+    /*border: white solid 2px;*/
+    /*border-radius: 3px;*/
+    /*padding: 0.2em;*/
+}
+
+.twitter-tweet a:hover, .twitt-td > twitter-tweet a:focus {
+    text-decoration: underline;
+}
